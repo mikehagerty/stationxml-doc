@@ -1,10 +1,8 @@
 .. Put any comments here
    Be sure to indent at this level to keep it in comment.
 
-Mapping SEED blockettes to StationXML
+What is StationXML ?
 ===========================================
 
-.. raw:: html
-   :file: StationXMLtoSEEDmapping.html
-
-
+StationXML tag element glossary
+-------------------------------

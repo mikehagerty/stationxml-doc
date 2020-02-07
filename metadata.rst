@@ -16,25 +16,27 @@ that describes it (including the date it was taken, the camera
 settings, etc).
 
 In this sense, metadata describes how the underlying data was
-collected, processed, produced, etc.
+collected, processed, etc.
 
 
 How is metadata used in geophysics ?
 -----------------------------------------
 
 When we install a scientific instrument (a sensor), we are generally interested in recording
-some physical quantity associated with environmental changes.
+some physical quantity (with corresponding input units) associated with environmental changes.
 Different geophysical sensors are used to measure different aspects of ground motion.
-For instance, a GPS antenna is used to measure changes in 
+For instance, a GPS receiver is used to measure changes in 
 ground position (input units = m),
 a broadband seismometer is used to measure changes in ground velocity
 (input units = m/s), 
 a strong-motion accelerometer is used to measure changes
 in ground acceleration (input units = :math:`m/s^2`) and an extensometer is
 used to measure changes in strain (input units = m/m) or strain-rate (input units = 1/s).
-Or, perhaps we'd like to measure changes in the atmosphere and so use
-a temperature probe to measure air temperature (input units = deg C) 
-and pressure (input units = Pa).
+
+Similarly, we may wish to measure changes in atmospheric temperature
+using a temperature probe (input units = :math:`°C`),
+and changes in atmospheric pressure using a pressure transducer
+(input units = Pa).
 
 The physical quantity (m, m/s, Pa, etc) is what we are interested in.
 However, the sensor and datalogger system used to measure and record it 

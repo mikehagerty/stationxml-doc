@@ -16,7 +16,9 @@ Welcome to StationXML-Docs's documentation!
    introduction.rst
    metadata.rst
    whatis_xml.rst
-   nrl.rst
+   whatis_stationxml.rst
+   stationxml_examples.rst
+   stationxml_tools.rst
    mapping_seed_to_xml.rst
    theory.rst
 
@@ -30,5 +32,7 @@ Indices and tables
 * :doc:`metadata`
 * :doc:`theory`
 * :doc:`whatis_xml`
-* :doc:`nrl`
+* :doc:`whatis_stationxml`
 * :doc:`mapping_seed_to_xml`
+* :doc:`stationxml_examples`
+* :doc:`stationxml_tools`

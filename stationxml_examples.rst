@@ -1,12 +1,12 @@
 .. Put any comments here
    Be sure to indent at this level to keep it in comment.
 
-The Nominal Response Library (NRL)
+StationXML Examples
 ===========================================
 
 
-What Is Metadata And Why Do We Need It ?
------------------------------------------
+#. Broadband seismic recorder
 
-Just cause
+#. Extensometer
 
+#. Pressure Transducer

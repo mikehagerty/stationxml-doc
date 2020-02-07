@@ -6,6 +6,11 @@ Theory of Instrument Response
 ===========================================
 
 
+.. image:: ./stage_sequence.png
+
+A seismic recording system can be considered a sequence of stages.
+
+
 Introduction
 -----------------------------------------
 
@@ -25,8 +30,22 @@ in several ways, all equally valid:
 #. By the Laplace transfer function
 #. By the complex (Fourier) frequency response
 
-Any one of these is a complete description of the system.
-If we know any one of these we can derive the others.
+Any one of these is a complete description of the system; which one
+we choose to work with usually depends on our purpose.
+For instance, for edge detection, a common task of image processing,
+we care most about the shape of the step response,
+whereas
+in digital filtering, the complex frequency response is often
+most important.
+
+For analog sensors (e.g., seismic sensors) that measure in continuous time, we 
+generally describe the effect of the sensor stage using the poles and zeros of 
+the Laplace transform of the stage transfer function, :math:`H(s)`,
+while for purely digital stages (e.g., anti-alias FIR filters), we use 
+either the poles and zeros of the z-transform of the transfer function, :math:`H(z)`,
+or the corresponding polynomial coefficients.
+
+Fortunately, if we know any one of these we can derive the others.
 For instance, the system step response is found by integrating
 the impulse response with respect to time.
 Similarly, the Fourier response can be found by evaluating
