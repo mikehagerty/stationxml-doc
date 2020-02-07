@@ -62,9 +62,9 @@ StationXML Example
          </FDSNStationXML>
 
 
-      Note that each XML element must have a START tag (e.g., <Station>) and an end tag (</Station>)
-      and the element hierarchy must be maintained (e.g., a <Channel> may not exist outside
-      of a <Station> and a <Station> may not exist outside of a <Network>, etc.).
+    Note that each XML element must have a start tag (e.g., <Station>) and an end tag (</Station>)
+    and the element hierarchy must be maintained (e.g., a <Channel> may not exist outside
+    of a <Station> and a <Station> may not exist outside of a <Network>, etc.).
 
 
 The FDSN and StationXML schema
