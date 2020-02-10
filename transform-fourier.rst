@@ -2,6 +2,9 @@
 .. Put any comments here
    Be sure to indent at this level to keep it in comment.
 
+Introduction
+'''''''''''''''''
+
 The Fourier Transform (:math:`t \rightarrow \omega`) is defined by
 
 .. math::
@@ -27,6 +30,38 @@ must be opposite, and the product of their scalefactors must equal
 :math:`\frac{1}{2\pi}`.
 
 
-Poles and Zeros
-^^^^^^^^^^^^^^^^^^^^^
+
+Discrete Time Fourier Transform (DTFT)
+''''''''''''''''''''''''''''''''''''''''''
+
+In the Fourier transform pair above, both time (:math:`t`) and frequency (:math:`\omega`)
+are continuous parameters.
+In contrast, for signals sampled discretely in time, we may define the related Discrete Time Fourier Transform (DTFT) as
+
+.. math::
+
+   X(\omega)=\frac{1}{2\pi}\sum_{n=-\infty}^{\infty}x[n]e^{-j\omega n}
+
+.. math::
+
+   x[n]=\int_{0}^{2\pi}X(\omega)e^{+j\omega n}d\omega
+
+where :math:`n` is the discrete sample number, and :math:`\omega`  is still continuous.
+
+Discrete Fourier Transform (DFT)
+''''''''''''''''''''''''''''''''''''''''''
+
+
+And finally, when both time and frequency are discrete, we define the Discrete Fourier Transform (DFT) pair by
+
+.. math::
+
+   X[k]=\frac{1}{N}\sum_{n=0}^{N-1}x[n]e^{-j2\pi kn/N}
+
+.. math::
+
+   x[n]=\sum_{k=0}^{N-1}X[k]e^{+j2\pi kn/N}
+
+Note that the popular Fast Fourier Transform (FFT) is a particular implementation of the DFT.
+
 

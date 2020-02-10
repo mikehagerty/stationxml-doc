@@ -20,7 +20,6 @@ Welcome to StationXML-Docs's documentation!
    stationxml_examples.rst
    stationxml_tools.rst
    mapping_seed_to_xml.rst
-   theory.rst
    Appendix_A.rst
 
 Indices and tables
@@ -31,7 +30,6 @@ Indices and tables
 * :ref:`search`
 * :doc:`introduction`
 * :doc:`metadata`
-* :doc:`theory`
 * :doc:`whatis_xml`
 * :doc:`whatis_stationxml`
 * :doc:`mapping_seed_to_xml`

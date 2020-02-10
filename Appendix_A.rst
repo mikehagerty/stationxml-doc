@@ -2,9 +2,12 @@
    Be sure to indent at this level to keep it in comment.
 
 
-Channel Naming Conventions
+Appendices
 ===========================================
 
+
+Channel Naming Conventions
+-------------------------------------
 
 .. image:: ./Appendix_A_1.png
 .. image:: ./Appendix_A_2.png
@@ -14,4 +17,9 @@ Channel Naming Conventions
 .. image:: ./Appendix_A_6.png
 .. image:: ./Appendix_A_7.png
 .. image:: ./Appendix_A_8.png
+
+Theory of Instrument Response
+-------------------------------------
+
+.. include:: theory.rst
 
