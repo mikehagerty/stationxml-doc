@@ -7,6 +7,10 @@ StationXML Examples
 
 #. Broadband seismic recorder
 
+   This example stationxml was created using the steps shown in StationXML Tools.
+
+   .. include:: example_1.rst
+
 #. Extensometer
 
 #. Pressure Transducer
