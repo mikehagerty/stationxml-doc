@@ -1,10 +1,6 @@
 .. Put any comments here
    Be sure to indent at this level to keep it in comment.
 
-StationXML Tools
-===========================================
-
-
 As stationxml files are ordinary ascii files, they may be editted with 
 any text editor (e.g., vi/VIM, TextWrangler, Notepad/Wordpad, etc) 
 
@@ -16,7 +12,7 @@ Fortunately, several tools exist that allow creation and editting of
 stationxml files.
 
 obspy + NRL
-------------------------------
+'''''''''''''''''''
 
 ObsPy contains a number of very useful modules for working with stationxml.
 In particular, ObsPy contain a module able to connect
@@ -1005,7 +1001,7 @@ exports this to stationxml, and validates it against the stationxml schema.
 
 
 IRIS SEED-stationXML Converter
------------------------------------
+''''''''''''''''''''''''''''''''''''''
 
 IRIS maintains a java tool that can convert between dataless SEED and stationxml formats at:
 

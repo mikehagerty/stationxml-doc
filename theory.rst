@@ -9,7 +9,7 @@ A seismic recording system can be considered a sequence of stages.
 
 
 Introduction
-^^^^^^^^^^^^^^^^^^^^^
+''''''''''''''''''
 
 The theory of instrument response is contained in the theory of
 linear, time invariant systems, used to describe differential equations
@@ -30,7 +30,7 @@ e.g., for k stages numbered 1 to N,
    G(f)=\Pi_{k=1}^{N} G_{k}(f)
 
 Linear Time Invariant (LTI) Systems
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+'''''''''''''''''' ''''''''''''''''''
 
 Linear and time invariant systems can be fully described
 in several ways, all equally valid:
@@ -72,22 +72,4 @@ the impulse response with respect to time.
 Similarly, the Fourier response can be found by evaluating
 the Laplace transfer function along the imaginary axis as described
 below.
-
-
-The Fourier Transform
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. include:: transform-fourier.rst
-
-
-The Laplace Transform
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. include:: transform-laplace.rst
-
-
-The z-Transform
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. include:: transform-z.rst
 

@@ -3,24 +3,22 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
    :titlesonly:
+   :maxdepth: 5
 
 Welcome to StationXML-Docs's documentation!
 ===========================================
 
+..  :numbered=1:
+
 .. toctree::
-   :maxdepth: 3
-   :numbered:
    :glob:
    :caption: Contents:
 
    introduction.rst
-   metadata.rst
-   whatis_xml.rst
-   whatis_stationxml.rst
-   stationxml_examples.rst
-   stationxml_tools.rst
-   mapping_seed_to_xml.rst
-   Appendix_A.rst
+   reference.rst
+   response.rst
+   tools.rst
+   appendices.rst
 
 Indices and tables
 ==================
@@ -29,10 +27,7 @@ Indices and tables
 * :ref:`modindex`
 * :ref:`search`
 * :doc:`introduction`
-* :doc:`metadata`
-* :doc:`whatis_xml`
-* :doc:`whatis_stationxml`
-* :doc:`mapping_seed_to_xml`
-* :doc:`stationxml_examples`
-* :doc:`stationxml_tools`
-* :doc:`Appendix_A`
+* :doc:`reference`
+* :doc:`response`
+* :doc:`tools`
+* :doc:`appendices`

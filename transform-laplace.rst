@@ -60,41 +60,42 @@ by the linear differential equation,
 
 .. math::
 
-   c_{2}\ddot{f}(t)+c_{1}\dot{f}(t)+c_{0}f(t)=d_{2}\ddot{g}(t)+d_{1}\dot{g}(t)+d_{0}g(t)
+   a_{2}\ddot{y}(t)+a_{1}\dot{y}(t)+a_{0}y(t)=b_{2}\ddot{x}(t)+b_{1}\dot{x}(t)+b_{0}x(t)
 
-where :math:`f(t)` is the input signal (e.g., the ground motion), :math:`g(t)` is the output signal (the signal recorded)
-and the :math:`c_{k}` and :math:`d_{k}`  are constant (time-invariant) coefficients.
+where :math:`x(t)` is the input signal (e.g., the ground motion), :math:`y(t)` is the output signal (the signal recorded)
+and :math:`a_{k}` and :math:`b_{k}`  are constant (time-invariant) coefficients.
 If we assume the system is causal, so that the signals + derivatives are all 0 for :math:`t<0` ,
 then the Laplace Transform of the equation gives
 
 .. math::
 
-   c_{2}s^{2}F(s)+c_{1}sF(s)+c_{0}F(s)=d_{2}s^{2}G(s)+d_{1}sG(s)+d_{0}G(s)
+   a_{2}s^{2}Y(s)+a_{1}sY(s)+a_{0}Y(s)=b_{2}s^{2}X(s)+b_{1}sX(s)+b_{0}X(s)
 
 or
 
 .. math::
 
-   (c_{2}s^{2}+c_{1}s+c_{0})F(s)=(d_{2}s^{2}+d_{1}s+d_{0})G(s)
+   (a_{2}s^{2}+a_{1}s+a_{0})Y(s)=(b_{2}s^{2}+b_{1}s+b_{0})X(s)
 
 from which we can write the transfer function of the system as
 
 .. math::
 
-   H(s) = \frac{G(s)}{F(s)}=\frac{c_{2}s^{2}+c_{1}s+c_{0}}{d_{2}s^{2}+d_{1}s+d_{0}}
+   H(s) = \frac{Y(s)}{X(s)}=\frac{b_{2}s^{2}+b_{1}s+b_{0}}{a_{2}s^{2}+a_{1}s+a_{0}}
 
-
-which can be written as a ratio of polynomials as
+or more generally,
 
 .. math::
 
-   H(s) =\frac{\sum_{n=0}^{N}c_n s^n}{\sum_{m=0}^{M}d_n s^n}
+   H(s) =\frac{\sum_{k=0}^{M}b_k s^n}{\sum_{k=0}^{N}a_n s^n}
 
 This is the coefficient representation of the transfer function.
+It represents the transfer function as the ratio of two polynomials.
+The roots of the numerator polynomial are called 'zeros', while the
+roots of the denomenator polynomial are called 'poles'.
 
-Often, for analog stages, it is more convenient to factor the numerator
-and denominator polynomials of the transfer function 
-into the polezero representation,
+Often, for analog stages, it is more convenient to factor the 
+transfer function in terms of these poles and zeros:
 
 .. math::
 
@@ -102,4 +103,47 @@ into the polezero representation,
 
 where :math:`z_{k}` are the M zeros of the system, and :math:`p_{k}` are the N poles.
 
+Because the coefficients of the numerator and denominator polynomials are real,
+the corresponding roots (poles and zeros) must occur in complex conjugate pairs.
 
+Thus, the poles and zeros are either real or form pairs that are symmetric with
+respect to the real axis in the complex :math:`s`-plane.
+In addition, it can be shown that for systems that are stable and causal,
+the poles all have real parts :math:`\le 0`.
+
+Recall that the Laplace transform variable is given by :math:`s=\sigma+j\omega`.
+Along the imaginary axis, :math:`\sigma=0` and hence :math:`s=j\omega`.
+Thus, we may express the complex frequency response of the analog stage
+by calculating its polezero expansion 
+
+.. math::
+
+   H(f)=A_0\frac{\Pi_{k=1}^{M} (s-z_{k})} {\Pi_{k=1}^{N} (s-p_{k})}
+
+where :math:`s=j2\pi f` [rad/s] or :math:`s=jf` [Hz].
+
+Thus, given the poles and zeros of an analog stage,
+in order to properly calculate the stage frequency response, 
+we must know the units of :math:`s` used to calculate the poles and zeros.
+
+In stationxml, these units are specified by the PzTransferFunctionType element
+within the PolesZerosType response stage:
+
+   ::
+
+      <Stage number="1">
+      <PolesZeros>
+         ...
+         </OutputUnits>
+            <PzTransferFunctionType>LAPLACE (RADIANS/SECOND)</PzTransferFunctionType>
+            <NormalizationFactor>1.0</NormalizationFactor>
+            <NormalizationFrequency unit="HERTZ">1.0</NormalizationFrequency>
+
+
+where the possibile values for PzTransferfunctionType are:
+
+  #. "LAPLACE (RADIANS/SECOND)"
+  #. "LAPLACE (HERTZ)"
+  #. "DIGITAL (Z-TRANSFORM)"  (Discussed in next section)
+
+Note also the NormalizationFactor

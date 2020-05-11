@@ -1,13 +1,17 @@
 .. Put any comments here
    Be sure to indent at this level to keep it in comment.
 
-
-Appendices
+5. Appendices
 ===========================================
 
+Mapping SEED blockettes to StationXML *placeholder*
+----------------------------------------------------
 
-Channel Naming Conventions
--------------------------------------
+.. raw:: html
+   :file: StationXMLtoSEEDmapping.html
+
+Channel Naming Conventions *placeholder*
+-------------------------------------------
 
 .. image:: ./Appendix_A_1.png
 .. image:: ./Appendix_A_2.png
@@ -17,9 +21,3 @@ Channel Naming Conventions
 .. image:: ./Appendix_A_6.png
 .. image:: ./Appendix_A_7.png
 .. image:: ./Appendix_A_8.png
-
-Theory of Instrument Response
--------------------------------------
-
-.. include:: theory.rst
-

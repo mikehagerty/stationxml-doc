@@ -68,3 +68,5 @@ The transfer function can also be factored in terms of poles and zeros (for :mat
 
 where :math:`c_{k}` are the M zeros of the system, and :math:`d_{k}` are the N poles.
 
+For a system to be both stable and causal, its poles must lie inside the unit circle, or 
+:math:`|d_{k}|<1 k=1,N`
